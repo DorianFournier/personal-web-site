@@ -1,0 +1,1765 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*----- NAV & HERO -----*/
+.flag {
+  width: 30px;
+  height: 30px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #f9f9f9;
+  z-index: -1;
+}
+
+.hero {
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+}
+
+.headline {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 100px;
+  transform: translate(-20%, -70%);
+  color: white;
+  z-index: 3;
+  text-shadow: 0px 2px 2px black;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-rtl {
+  position: absolute;
+  top: 83%;
+  left: 10%;
+  font-size: 50px;
+  transform: translate(-15%, -70%);
+  color: white;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+  margin: 5%;
+}
+
+.marquee-rtl>div {
+  display: inline-block;
+  white-space: nowrap;
+  animation: defilement-rtl 15s infinite linear;
+  animation-delay: 3s;
+  /*cursor: pointer;*/
+  padding: 1px 2em 1px 100%;
+}
+
+.rotation_effect {
+  transition: transform 0.7s ease-in-out;
+}
+
+.rotation_effect:hover {
+  transform: rotate(360deg);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  color: white;
+  align-items: center;
+  min-height: 10vh;
+  margin: 0 auto;
+  width: 85%;
+  background: white;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #f1c40f;
+}
+
+nav button {
+  margin: 7px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+nav ul li a {
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a:hover {
+  color: #91640f;
+}
+
+nav ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  background: #f1c40f;
+  border-radius: 20px;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+nav ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+nav img {
+  margin: 7px;
+}
+
+nav img:hover {
+  transition: all 0.5s ease;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
+/*----- NAV & HERO -----*/
+/*----- ARROW & DESCRIPTION -----*/
+.arrow {
+  margin-bottom: 50px;
+}
+
+.arrow img {
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.arrow img:hover {
+  opacity: 1;
+  transform: rotate(1turn);
+}
+
+.welcomeText {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+/*----- ARROW & DESCRIPTION -----*/
+/*----- ABOUT ME & CARD -----*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  max-height: 800px;
+  text-align: center;
+  margin-bottom: 5vh;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.line_under_card {
+  background: #f1c40f;
+  position: absolute;
+  visibility: visible;
+  height: 10px;
+  width: 100%;
+  z-index: 777;
+  top: 99%;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.aboutMeText {
+  display: flex;
+  width: 50%;
+  margin-top: 3%;
+  text-align: justify;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.wrapper_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.cta_logo {
+  display: flex;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: white;
+  border-radius: 50px;
+  background: #f1c40f;
+  transition: 1s;
+  box-shadow: 5px 5px 0 #b4b3b3c5;
+  transform: skewX(-0deg);
+}
+
+.cta_logo:focus {
+  outline: none;
+}
+
+.cta_logo:hover {
+  transition: 0.5s;
+  color: #f9f9f9;
+  box-shadow: 10px 10px 0 #b4b3b3c5;
+}
+
+/*----- ABOUT ME & CARD -----*/
+/*----- EDUCATION & SEPARATE LINE -----*/
+.education {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.educationText {
+  display: flex;
+  width: 50%;
+  text-align: justify;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.education img {
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+.separate_line {
+  visibility: hidden;
+  height: 2px;
+  background: #8d8c86;
+  opacity: 0.4;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+/*----- EDUCATION & SEPARATE LINE -----*/
+/*----- MY PROJETCS NDEX -----*/
+.myProjects_container {
+  margin: 5%;
+}
+
+.myProjects a {
+  margin-top: 2%;
+}
+
+.col {
+  width: 300px;
+}
+
+.col .card {
+  height: 420px;
+}
+
+.projectText {
+  display: flex;
+  width: 50%;
+  text-align: justify;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.project_left {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project_left img {
+  width: 30%;
+  border-radius: 5%;
+  margin-bottom: 5%;
+}
+
+.project_right {
+  display: flex;
+  margin: 5%;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.project_right img {
+  width: 30%;
+  border-radius: 5%;
+  margin-bottom: 5%;
+}
+
+#img_project {
+  width: 22%;
+}
+
+.box-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+/*----- MY PROJETCS INDEX -----*/
+/*----- JOB -----*/
+.apprenticeship {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.apprenticeshipText {
+  display: flex;
+  width: 50%;
+  text-align: justify;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.apprenticeship img {
+  width: 50%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== https://codepen.io/FlorinPop17/pen/drJJzK ===== ¨*/
+.blobs-container {
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.blob {
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse 3s infinite;
+  background-color: rgb(228, 228, 228);
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgb(241, 196, 15);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.linksContainer a {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  text-decoration: none;
+  color: grey;
+}
+
+.linksContainer a:hover {
+  color: black;
+}
+
+/*----- JOB -----*/
+/*----- SKILLS -----*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr;
+  gap: 2% 2%;
+  grid-template-areas: "software hardware";
+}
+
+.software {
+  grid-area: software;
+  margin-left: 15%;
+}
+
+.hardware {
+  grid-area: hardware;
+  margin-right: 15%;
+}
+
+.containerskills {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: #ddd;
+  margin-bottom: 2%;
+  transition: all 0.3s ease;
+}
+
+.containerskills:hover {
+  -ms-transform: scale(1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05);
+  /* Safari 3-8 */
+  transform: scale(1.05);
+}
+
+.skills {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  text-shadow: #4b4c4d 1px 0px 2px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.skills_container {
+  margin-top: 3%;
+  margin-bottom: 5%;
+
+}
+
+.sw_skill_1 {
+  width: 78%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.sw_skill_2 {
+  width: 70%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.sw_skill_3 {
+  width: 63%;
+  padding-left: 4%;
+  background-color: #9e9698;
+}
+
+.sw_skill_4 {
+  width: 71%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.sw_skill_5 {
+  width: 67%;
+  padding-left: 4%;
+  background-color: #9e9698;
+}
+
+.sw_skill_6 {
+  width: 73%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.sw_skill_7 {
+  width: 77%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.hw_skill_1 {
+  width: 75%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.hw_skill_2 {
+  width: 73%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.hw_skill_3 {
+  width: 68%;
+  padding-left: 4%;
+  background-color: #9e9698;
+}
+
+.hw_skill_4 {
+  width: 75%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.project_skill_1 {
+  width: 67%;
+  padding-left: 4%;
+  background-color: #f1c40f;
+}
+
+.project_skill_2 {
+  width: 60%;
+  padding-left: 4%;
+  background-color: #9e9698;
+}
+
+.software .text-center {
+  margin-top: 3%;
+}
+
+.hardware .text-center {
+  margin-top: 3%;
+}
+
+/*----- SKILLS -----*/
+/*----- COMING SOON -----*/
+.middle {
+  text-align: center;
+}
+
+hr {
+  margin-left: auto;
+  width: 50%;
+}
+
+.middle p {
+  margin-top: 2%;
+  font-size: 30px;
+  color: #4b4c4d;
+  font-family: "Roboto", sans-serif;
+}
+
+.github_linkedin_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/*----- COMING SOON -----*/
+/*----- TIME LINE -----*/
+.Timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.T1 {
+  visibility: visible;
+}
+
+.T2 {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.rb-container_2 {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.rb-container_2 ul.rb_2 {
+  display: flex;
+}
+
+.rb-container_2 ul.rb_2 li {
+  list-style: none;
+  min-height: 50px;
+  border-top: 1px dashed #0679A9;
+  padding: 0 0 10px 30px;
+  position: relative;
+}
+
+.rb-container_2 ul.rb_2 li:last-child {
+  border-right: 1px dashed #0679A9;
+  border-bottom: 1px dashed #0679A9;
+  border-top: 0;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  padding: 0 0 10px 30px;
+}
+
+.rb-container_2 ul.rb_2 li::before {
+  position: absolute;
+  left: -18px;
+  top: -15px;
+  content: " ";
+  border: 8px solid #386072;
+  border-radius: 500%;
+  background: #f1c40f;
+  height: 30px;
+  width: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.rb-container_2 ul.rb_2 li:hover::before {
+  border-color: #f1c40f;
+  background: #386072;
+  transition: all 1000ms ease-in-out;
+}
+
+ul.rb_2 li .timestamp_2 {
+  color: #4e86a0;
+  margin-top: 5%;
+  position: relative;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-title_2 {
+  color: #232931;
+  padding-left: 5%;
+}
+
+.rb-container_1 {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.rb-container_1 ul.rb_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rb-container_1 ul.rb_1 li {
+  list-style: none;
+  min-height: 110px;
+  border-top: 1px dashed #0679A9;
+  padding: 0 0 10px 30px;
+  position: relative;
+}
+
+.rb-container_1 ul.rb_1 li:last-child {
+  border-top: 1px dashed #0679A9;
+  padding: 0 0 10px 30px;
+}
+
+.rb-container_1 ul.rb_1 li::before {
+  position: absolute;
+  left: -18px;
+  top: -15px;
+  content: " ";
+  border: 8px solid #386072;
+  border-radius: 500%;
+  background: #f1c40f;
+  height: 30px;
+  width: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.rb-container_1 ul.rb_1 li:hover::before {
+  border-color: #f1c40f;
+  background: #386072;
+  transition: all 1000ms ease-in-out;
+}
+
+ul.rb_1 li .timestamp_2 {
+  color: #4e86a0;
+  margin-top: 5%;
+  position: relative;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-title_2 {
+  color: #232931;
+  padding-left: 5%;
+}
+
+.rb-container_1 {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.rb-container_1 ul.rb_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rb-container_1 ul.rb_2 li {
+  list-style: none;
+  min-height: 120px;
+  border-top: 1px dashed #0679A9;
+  padding: 0 0 10px 30px;
+  position: relative;
+}
+
+.rb-container_1 ul.rb_2 li:last-child {
+  border-right: 1px dashed #0679A9;
+  border-bottom: 1px dashed #0679A9;
+  border-top: 0;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  padding: 0 0 10px 30px;
+}
+
+.rb-container_1 ul.rb_2 li::before {
+  position: absolute;
+  left: -18px;
+  top: -15px;
+  content: " ";
+  border: 8px solid #386072;
+  border-radius: 500%;
+  background: #f1c40f;
+  height: 30px;
+  width: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.rb-container_1 ul.rb_2 li:hover::before {
+  border-color: #f1c40f;
+  background: #386072;
+  transition: all 1000ms ease-in-out;
+}
+
+ul.rb_2 li .timestamp_2 {
+  color: #4e86a0;
+  margin-top: 5%;
+  position: relative;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-title_2 {
+  color: #232931;
+  padding-left: 5%;
+}
+
+/*----- TIME LINE -----*/
+/*----- FOOTER -----*/
+.footer-basic {
+  padding: 40px 0;
+  background-color: #f8f8f8;
+  color: #4b4c4d;
+  border-top: 2px solid #f1c40f;
+  width: 85%;
+  margin-left: Auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 13;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.footer-basic .social>a:hover {
+  opacity: 1;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+/*----- FOOTER -----*/
+/*------- OMNICAR Project -------*/
+.omnicarDescription {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.omnicarDescription img {
+  width: 80%;
+  margin-top: 5%;
+}
+
+.projectText-Omnicar {
+  display: flex;
+  width: 80%;
+  text-align: justify;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.container-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "Gantt Trello CubeIDE SaleaeLogic AltiumDesigner"
+    "Git GoogleDrive MacOs Windows Teams";
+  width: 70%;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-logo img {
+  width: 80%;
+  margin: 10%;
+  position: relative;
+}
+
+.Gantt {
+  grid-area: Gantt;
+}
+
+.Gantt p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.Gantt:hover p.text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Trello {
+  grid-area: Trello;
+}
+
+.Trello p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.Trello:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.CubeIDE {
+  grid-area: CubeIDE;
+}
+
+.CubeIDE p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.CubeIDE:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.SaleaeLogic {
+  grid-area: SaleaeLogic;
+}
+
+.SaleaeLogic p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.SaleaeLogic:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.AltiumDesigner {
+  grid-area: AltiumDesigner;
+}
+
+.AltiumDesigner p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.AltiumDesigner:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Git {
+  grid-area: Git;
+}
+
+.Git p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.Git:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.GoogleDrive {
+  grid-area: GoogleDrive;
+}
+
+.GoogleDrive p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.GoogleDrive:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.MacOs {
+  grid-area: MacOs;
+}
+
+.MacOs p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.MacOs:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Windows {
+  grid-area: Windows;
+}
+
+.Windows p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.Windows:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Teams {
+  grid-area: Teams;
+}
+
+.Teams p.text {
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+
+.Teams:hover p.text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project2 {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.project2 img {
+  width: 40%;
+}
+
+/*------- OMNICAR Project -------*/
+/*----- MEDIA QUERIES -----*/
+@media (min-width: 250px) and (max-width: 499.98px) {
+  .aboutMe .card {
+    margin-top: 3vh;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2% 0px;
+    grid-template-areas:
+      "software"
+      "hardware";
+  }
+
+  .software {
+    margin-left: 0%;
+  }
+
+  .hardware {
+    grid-area: hardware;
+    margin-right: 0px;
+  }
+
+  .containerskills {
+    width: 80%;
+  }
+
+  .box-image {
+    width: 100%;
+  }
+
+  .T1 {
+    visibility: visible;
+    height: auto;
+    margin: auto;
+  }
+
+  .rb-container_2 ul.rb_2 {
+    display: inline-block;
+  }
+
+  .rb-container_2 ul.rb_2 li {
+    list-style: none;
+    min-height: 50px;
+    border-left: 1px dashed #0679A9;
+    border-top: 0;
+    padding: 0 0 50px 30px;
+    position: relative;
+  }
+
+  .T2 {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 279.99px) and (max-width: 767.98px) {
+  .headline {
+    top: 50%;
+    left: 5%;
+    font-size: 70px;
+  }
+
+  .omnicar {
+    margin-top: 14%;
+    font-size: 60px;
+  }
+
+  .aboutMe {
+    flex-direction: column;
+  }
+
+  .aboutMeText {
+    width: 100%;
+  }
+
+  #education {
+    margin-top: 10%;
+  }
+
+  .education {
+    flex-direction: column-reverse;
+  }
+
+  .educationText {
+    width: 100%;
+  }
+
+  .education img {
+    width: 80%;
+  }
+
+  #myProjects {
+    margin-top: 10%;
+  }
+
+  .myProjects a {
+    margin-bottom: 5%;
+  }
+
+  .apprenticeship {
+    flex-direction: column-reverse;
+  }
+
+  .apprenticeshipText {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .apprenticeshipText p {
+    margin-top: 5%;
+  }
+
+  .apprenticeship img {
+    width: 90%;
+  }
+
+  #job {
+    margin-top: 10%;
+  }
+
+  #ctnClick {
+    margin-right: 10%;
+  }
+
+  #ctnClick,
+  #ctnClick2 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+
+  .row .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col .card {
+    height: 420px;
+    min-width: 230px;
+  }
+
+  .marquee-rtl {
+    font-size: 30px;
+  }
+
+  .separate_line {
+    visibility: visible;
+    margin-bottom: 8%;
+    margin-top: 8%;
+  }
+
+  .linksContainer {
+    margin-bottom: 5%;
+  }
+
+  .project_left,
+  .project_right {
+    flex-direction: column-reverse;
+  }
+
+  .projectText {
+    width: 100%;
+  }
+
+  .project_left img {
+    width: 70%;
+    margin-top: 7%;
+  }
+
+  .project_right img {
+    width: 70%;
+    margin-top: 7%;
+  }
+
+  #img_project {
+    width: 40%;
+  }
+
+  .wrapper_logo {
+    margin-bottom: 3%;
+  }
+
+  .wrapper_logo img {
+    width: 20%;
+  }
+
+  .software .text-center {
+    margin-top: 10%;
+  }
+
+  #skills {
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
+
+  .wrapper {
+    margin-bottom: 5%;
+  }
+
+  .omnicarDescription {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .omnicarDescription img {
+    width: 98%;
+  }
+
+  .container-logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "Gantt Trello"
+      "CubeIDE SaleaeLogic"
+      "AltiumDesigner Git"
+      "GoogleDrive MacOs"
+      "Windows Teams";
+  }
+
+  .container-logo img {
+    width: 70%;
+  }
+
+  .T2 {
+    visibility: hidden;
+
+  }
+
+  .T1 {
+    visibility: visible;
+    height: auto;
+    margin: auto;
+  }
+
+  .T1 .rb-container_2 ul.rb_2 {
+
+    display: inline-block;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767.98px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2% 0px;
+    grid-template-areas:
+      "software"
+      "hardware";
+    margin-bottom: 10%;
+  }
+
+  .software {
+    margin-top: 0;
+    margin-left: 0%;
+  }
+
+  .hardware {
+    margin-right: 0%;
+  }
+
+  .containerskills {
+    width: 60%;
+  }
+
+  .box-image {
+    width: 100%;
+  }
+
+  .aboutMe .card {
+    margin-top: 5vh;
+  }
+
+  .T1 {
+    visibility: visible;
+    height: auto;
+    margin: auto;
+  }
+
+  .rb-container_2 ul.rb_2 {
+    display: inline-block;
+  }
+
+  .rb-container_2 ul.rb_2 li {
+    list-style: none;
+    min-height: 50px;
+    border-left: 1px dashed #0679A9;
+    border-top: 0;
+    padding: 0 0 50px 30px;
+    position: relative;
+  }
+
+  .T2 {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .headline {
+    font-size: 70px;
+  }
+
+  .aboutMe .card {
+    margin-top: 5vh;
+  }
+
+  .row .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col .card {
+    width: 400px;
+  }
+
+  .aboutMe {
+    flex-direction: column;
+  }
+
+  .apprenticeship,
+  .education {
+    flex-direction: column-reverse;
+  }
+
+  .apprenticeshipText,
+  .aboutMeText,
+  .educationText {
+    width: 100%;
+  }
+
+  .apprenticeship img {
+    width: 70%;
+  }
+
+  .separate_line {
+    visibility: visible;
+    margin-bottom: 5%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2% 0px;
+    grid-template-areas:
+      "software"
+      "hardware";
+  }
+
+  .software {
+    margin-left: 0%;
+  }
+
+  .hardware {
+    margin-right: 0%;
+  }
+
+  .containerskills {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: auto;
+  }
+
+  .software .text-center {
+    margin-top: 5%;
+  }
+
+  .project_left,
+  .project_right {
+    flex-direction: column-reverse;
+  }
+
+  .projectText {
+    width: 100%;
+  }
+
+  .project_left img {
+    width: 50%;
+    margin-top: 7%;
+  }
+
+  .project_right img {
+    width: 50%;
+    margin-top: 7%;
+  }
+
+  #img_project {
+    width: 30%;
+  }
+
+  .box-image {
+    width: 80%;
+    flex-direction: row;
+  }
+
+  .T1 {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  .T2 {
+    visibility: visible;
+    height: auto;
+    width: auto;
+  }
+
+  .apprenticeship img {
+    margin-top: 5%;
+  }
+
+  ;
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .headline {
+    font-size: 70px;
+  }
+
+  .col .card {
+    height: 450px;
+  }
+
+  .T1 {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  .T2 {
+    visibility: visible;
+    height: auto;
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .software {
+    grid-area: software;
+    margin-left: 0%;
+  }
+
+  .hardware {
+    grid-area: hardware;
+    margin-right: 0%;
+  }
+
+  .containerskills {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background-color: #ddd;
+    margin-bottom: 2%;
+  }
+
+  .T1 {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  .T2 {
+    visibility: visible;
+    height: auto;
+    width: auto;
+    margin-bottom: 0%;
+  }
+}
+
+@media (min-width: 1857.99px) and (max-width: 2200.98px) {
+  .marquee-rtl {
+    left: 11%;
+    margin: 4%;
+  }
+}
+
+/*------- CLICK ZOOM -------*/
+/* Style the Image Used to Trigger the Modal */
+#myImg,
+#myImg2,
+#myImg3,
+#myImg4,
+#myImg5,
+#myImg6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover,
+#myImg2:hover,
+#myImg3:hover,
+#myImg4:hover,
+#myImg5:hover,
+#myImg6:hover {
+  opacity: 0.8;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}

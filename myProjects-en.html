@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Dorian Fournier">
+  <title>My projects - Dorian Fournier</title>
+  <link rel="icon" type="image/png" href="images/graduated.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body class="bg-light text-dark">
+  <header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index-en.html">Back Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project_1">Driver</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project_2">Flappy-Thon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project_3">Cookies Games</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#project_4">Smart Fridge</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project_6">Omnicar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project_8">Others</a>
+          </li>
+        </ul>
+      </div>
+      <a href="./myProjects.html" class="rotation_effect">
+        <img class="flag" src="images/france.png" alt="French flag" />
+      </a>
+    </nav>
+    <section>
+      <div class="hero">
+        <img src="images/embeddedProgramming.jpg" alt="Programmation" />
+        <h1 class="headline">My projects</h1>
+        <div class="marquee-rtl">
+          <div>Embedded development, electronic, GUI, web ...</div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <div class="slider"></div>
+
+  <div class="arrow">
+    <img class="rounded mx-auto d-block" src="images/down-arrow.png" alt="Go down arrow"
+      style="width: 70px; height: 70px;" />
+  </div>
+
+  <h2 class="text-center" id="project_1">
+    Device drivers - Embedded C
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_right">
+      <img id="img_project" src="images/drivers.png" alt="Device driver image" />
+      <div class="projectText">
+        <p>
+          Device drivers are indispensable for the development of embedded
+          systems. They are used to establish a connection between a program
+          and a device.<br /><br />
+          I developed some drivers in order to be able to use sensors/components within electronic systems.
+          <br><br>
+          <i><u>Examples of device driver developed during my projects :</u></i>
+        <ol>
+          <li>Driver LIS3DSH (accelerometer) : embedded C / µPython / SPI</li>
+          <li>Driver MAX31875 (temperature sensor) : embedded C / I²C</li>
+          <li>Driver Moteurs (L6205D driver) : embedded C / PWM</li>
+          <li>Driver for remote control car : embedded C</li>
+          <li>Study and modifications for nRF24L01 driver : embedded C / SPI</li>
+          <li>Driver LCD I²C : embedded C</li>
+          <li>Driver LCD TFT & capacitive touch SSD1963 : embedded C (work in progress)</li>
+        </ol>
+        This project has allowed me to develop my knowledge in embedded C.
+        <br /><br />The source codes are available on my GitHub profile.
+        </p>
+        <div class="wrapper_logo" style="margin-top: 5%;">
+          <a class="cta_logo" href="https://github.com/DorianFournier/Driver-MAX31875" target="_blank">
+            <span> <img src="images/github.png" alt="Logo GitHub" style="width: 35px;" /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_2">
+    Flappy-Thon
+  </h2>
+  <div class="container-sm " style="display: flex; align-items: center;">
+    <div class="project_left">
+      <div class="box-image">
+        <img id="myImg" src="images/flappython_menu_project.png" alt="Flappy-Thon menu." style="width: 70%" />
+        <img id="myImg2" src="images/flappython_game.png" alt="Flappy-Thon game" style="width: 70%" />
+      </div>
+
+      <div class="projectText ">
+        <p>
+          Development of a new version of the famous "Flappy Bird" game with the modern microPython language in order to
+          embed it into a
+          microcontroller.
+          <br /><br />
+          As you understand with this project's name, this game adds a new caracter : the Tuna Fish ("le Thon").
+          <br /><br />
+          To control the game, the user can use a push button to jump of the caracter, and an accelerometer (in
+          this
+          project : LIS3DSH) to
+          control his choice in the main menu.
+          These components are already soldered on the STM32F407G-DISC1 Evaluation Board used in this project.
+          <br /><br />
+          <u><i>languages and tools used :</i></u> OS Linux, VS Code, bash scripting, microPython, Git,
+          GitHub, SPI, UART, Timer, STM32F407G-DISC1, VT100 <br /><br />
+        </p>
+        <div class="wrapper_logo">
+          <a class="cta_logo" href="https://github.com/DorianFournier/Flappy-thon" target="_blank">
+            <span> <img src="images/github.png" alt="Logo GitHub" style="width: 35px;" /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_3">
+    Cookies Games
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_right">
+      <img id="myImg6" src="images/cookiesGames.png" alt="CookiesGames menu" />
+      <div class="projectText">
+        <p>
+          Continue in the world of gaming with this new project !<br /><br />
+          This time it's not just one game, but a multi-game platform !<br /><br />
+          With two teammates, we have developed CookiesGames, a multi-game platform
+          for greedy children from 7 to 77 years old.
+          This project was developed with <b>the C++ language</b>.
+          <br /><br />
+          I was in charge of the project management as well as the development of the game "FindTheCookie" present on
+          this platform. I also served as technical support on the blocking points that my teammates could encounter
+          in the development of their games.
+          <br /><br />
+          <i><u>languages and tools used :</u></i> C++, Qt, VSCode, Git, GitHub, Google Drive, Gantt, Trello.
+          <br /><br />
+        </p>
+        <div class="wrapper_logo">
+          <a class="cta_logo" href="https://github.com/DorianFournier/Qt_CookiesGames" target="_blank">
+            <span> <img src="images/github.png" alt="Logo GitHub" style="width: 35px;" /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_4">
+    Smart Fridge
+  </h2>
+  <div class="container-sm " style="display: flex; align-items: center;">
+    <div class="project_left">
+      <img src="images/sfridge.jpg" alt="Smart Fridge" />
+      <div class="projectText">
+        <p>
+          I also participate at the development of a
+          <b>home automation box</b> with 10 students from my school.
+          <br /><br />
+          I have been assigned with 3 other people, to the conception of a
+          connected pantry. The first thing we did was to make a
+          specification of the project with a customer's need. After that, we
+          studied the different tools available for the achievement of this
+          project.
+          <br /><br />
+          With my short experience in web development, I volunteered to
+          implement the model made on Adobe XD by other members of the
+          project.
+          <br /><br />
+          <u><i>languages and tools used :</i></u> HTML, CSS, JavaScript, PHP,
+          Bootstrap, GitHub. <br /><br />
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_5">
+    Connected Coffee Maker
+  </h2>
+  <div class="container-sm " style="display: flex; align-items: center">
+    <div class="project_right">
+      <div class="box-image">
+        <img id="myImg3" src="images/cafetiereCo.png"
+          alt="Connected coffe maker V1 - Electronic wiring with RF modules." style="width: 70%" />
+        <img id="myImg4" src="images/GUI_cafco.png" alt="Connected coffe maker V2 - GUI." style="width: 70%" />
+      </div>
+      <div class="projectText">
+        <p>
+          I also work on the development of a connected
+          coffee maker. For that, I modified an old coffee maker that I didn't
+          use : the Magimix M100.<br /><br />
+          The goals of this project were to be able to control the coffee maker
+          remotely.
+          <br /><br />
+          For that, the customer needs to have the possibilities of :
+        </p>
+        <ul>
+          <li>Make a small coffee</li>
+          <li>Make a large coffee</li>
+          <li>Adjust the size of the two previous possibility</li>
+        </ul>
+        <p>
+          Firstly, it was necessary to study the operation of the system. Then
+          we have welded wires at some places to allow us to change the
+          logical state of the connection which commands the start of the coffee
+          maker.
+          <br /><br />
+          <i><u>Languages and materials used :</u></i> C++, HTML, CSS, JS, VS Code,
+          ESP32, PlatformIO, Breadboard, components.
+          <br /><br />
+        </p>
+        <div class="wrapper_logo">
+          <a class="cta_logo" href="https://github.com/DorianFournier/Connected_Coffee_Maker" target="_blank">
+            <span> <img src="images/github.png" alt="Logo GitHub" style="width: 35px;" /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_6">
+    OmniCar Project
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_left">
+      <img src="images/omnicarProject.png" alt="RC car" />
+      <div class="projectText">
+        <p>
+          To validate my second year of training, I have to achieve a project
+          with my class. We choose to develop an RC car from scratch.
+          For that, an Embedded System Engineer will follow us during all this
+          project. <br /><br />
+          I was a volunteer for the development of
+          <b>the wireless communication</b> between the two technical objects
+          present in the project (TO1 - vehicle | TO2 - remote control). This
+          part allows me to participate in the design/conception of the two TOs of
+          the project. <br /><br />
+          After studying the different options available for
+          this task, I decided to use an nRF24L01 module. I use the
+          ShockBurst protocol
+          to manage the radio communication between the two TOs. In order to
+          communicate with the UHF (Ultra High Frequency) module, SPI protocol
+          and the management of software interrupts are required.
+          <br /><br />
+          <i><u>Languages and materials used :</u></i> Embedded C, SPI, Cube IDE,
+          STM32F407G-DISC1, nRF24L01+, Breadboard, components.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_7">
+    CAD
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_right">
+      <img src="images/cao.png" alt="Transceiver USB-UART" />
+      <div class="projectText">
+        <p>
+          During my last two years, I acquired strong skills in the
+          conception of PCB (Printed Circuit Boards). I produced several
+          electronic cards with different designs and manufacturing processes.
+          <br /><br />
+          The first PCB I made, it was to create a sound mixing desk. That
+          card was entirely made with « normal size component ».
+          <br /><br />
+          I also needed to design cards with SMD (Surface Mounted Device).
+          The picture present in this part shows the final results of a
+          USB-UART transceiver using SMD.
+          <br /><br />
+          For more information about my CAD skills, you have the possibility
+          to see the written report of the last card I made (Transceiver - French).
+          <br /><br />
+          <i><u>Software used :</u></i> Altium Designer.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_8">
+    Others
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_left">
+      <img id="myImg5" src="images/electronic.jpg" alt="Electronic wiring" />
+      <div class="projectText">
+        <p>
+          Passionate about new technologies and electronics,
+          I realize some projects in these fields.
+          <br /><br />
+          <i><u>Examples of projects :</u></i>
+        <ul>
+          <li>Embedded electronic</li>
+          <ul>
+            <li>embedded C</li>
+            <li>microPython</li>
+            <li>OS embedded Linux (scripting, bootloader)</li>
+          </ul>
+          <li>GUI development</li>
+          <ul>
+            <li>Qt <i>(eg : cookiesGames)</i></li>
+            <li>PyQt <i>(eg : ReadMeAreBoring)</i></li>
+          </ul>
+          <li>Electronic wiring</li>
+          <li>Web development <i>(eg : hum, this website !)</i></li>
+        </ul>
+        I also like to keep improving my skills in Unix environments.
+        <br /><br />
+        You can find more information on my GitHub and LinkedIn profiles !
+        </p>
+        <br />
+        <div class="github_linkedin_button">
+          <div class="wrapper_logo">
+            <a class="cta_logo" href="https://github.com/DorianFournier/Connected-Door" target="_blank">
+              <span> <img src="images/github.png" alt="Logo GitHub" style="width: 35px;" /></span>
+            </a>
+          </div>
+          <div class="wrapper_logo">
+            <a class="cta_logo" href="https://www.linkedin.com/in/dorian-fournier-086a53153/" target="_blank">
+              <span> <img src="images/linkedin.png" alt="Logo GitHub" style="width: 35px;" /></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separate_line"></div>
+
+  <h2 class="text-center" id="project_9">
+    And for tomorrow ?
+  </h2>
+  <div class="container-sm" style="display: flex; align-items: center;">
+    <div class="project_right">
+      <img src="images/swift.png" alt="Logo Swift" style="width: 25%;" />
+      <div class="projectText">
+        <p>
+          <b>Curiosity is a bad habit?</b><br /><br />
+          I would say no, but with all my curiosity, I don't have the time to do all my wished projects !
+          <br /><br />
+          <u><i>These are the fields I would like to work on for my next projects :</i></u>
+        <div>
+          <ul>
+            <li>IOS development : Swift / Objective-C</li>
+            <li>Hash concepts : Cybersecurity</li>
+            <li>IOT : Sensor network</li>
+            <li>OS real time : FreeRTOS</li>
+          </ul>
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trigger the Modal -->
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">
+      <p></p>
+    </div>
+  </div>
+
+  <div class="footer-basic">
+    <footer>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/dorian-fournier/" target="_blank"><img src="images/linkedin.png"
+            alt="Logo Linkedin" style="width: 60%; padding-bottom: 25%;" /> </a><a
+          href="mailto:dorian.fournier@ynov.com"><img src="images/mail.png" alt="Logo mail"
+            style="width: 70%; padding-bottom: 20%;" /></a><a href="https://github.com/DorianFournier" target="_blank">
+          <img src="images/github.png" alt="Logo GitHub" style="width: 70%; padding-bottom: 20%;" />
+        </a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="index-en.html">Back Home</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#project_1">Driver</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#project_3">CookiesGames</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#project_6">OmniCar</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#project_8">Others</a>
+        </li>
+      </ul>
+      <p class="copyright">Dorian Fournier site© 2022</p>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+    integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"
+    integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js"
+    integrity="sha512-0kQqdmb3fpKtRwrbCZDlmiwuZgDyPAOLDOu/HyAt4py7lAVDXKknqtqS6dFNV8U8JrHZymQxlO9SFPZ2u8dhMw=="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDpE3b0PcyIdomjssMTyIEsSGo1GFgA8S8",
+      authDomain: "dorian-fournier.firebaseapp.com",
+      databaseURL: "https://dorian-fournier.firebaseio.com",
+      projectId: "dorian-fournier",
+      storageBucket: "dorian-fournier.appspot.com",
+      messagingSenderId: "180470694531",
+      appId: "1:180470694531:web:4fed492f35646502add1b6",
+      measurementId: "G-GM3RXTDDSL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+</body>
+
+</html>
